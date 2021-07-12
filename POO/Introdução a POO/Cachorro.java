@@ -10,9 +10,9 @@ public class Cachorro extends Animal {
 	
 	
 	
-	public Cachorro (String nome, String idade, String som, String raça, String nomeDono,String rgDono, String tamanho, String correr )
+	public Cachorro (String nome, String idade, String raça, String nomeDono,String rgDono, String tamanho, String correr )
 	{
-		super(nome, idade, som);
+		super(nome, idade);
 		this.raça = raça;
 		this.nomeDono = nomeDono;
 		this.rgDono = rgDono;
@@ -21,15 +21,22 @@ public class Cachorro extends Animal {
 		
 	}
 	
-	public Cachorro (String nome, String idade,String som, String raça, String nomeDono,String rgDono )
+	public Cachorro (String nome, String idade, String raça, String nomeDono,String rgDono )
 	{
-		super(nome, idade, som);
+		super(nome, idade);
 		this.raça = raça;
 		this.nomeDono = nomeDono;
 		this.rgDono = rgDono;
 		
 	}
 
+	
+	
+	@Override
+	public void emitirsom1()
+	{
+		System.out.println("O som que o animal é: au.. au.. au...");
+	}
 	
 	
 	public String getRaça() {
@@ -110,8 +117,14 @@ public class Cachorro extends Animal {
 	public void saida()
 	{
 	
-		System.out.println("\nO nome do cachorro é: " + getNome() + "\nIdade: " + getIdade() + "\nO animal emite qual som: "+ getSom() + "\nRaça: "
+		System.out.println("\nO nome do cachorro é: " + getNome() + "\nIdade: " + getIdade()  + "\nRaça: "
 		+ raça + "\nNome do dono: " + nomeDono + "\nRg do dono: " + rgDono + "\nPorte do cachorro: " + tamanho + "\nO cachorro deve correr: " + correr );
+	}
+
+	@Override
+	public void emitirsom(String sons) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	
