@@ -3,14 +3,15 @@ package Taya;
 public class Cavalo extends Animal {
 	
 
+
 	private String nomeDono;
 	private String rgDono;
 	private String correr;
 	private String cor;
 	
-	public Cavalo (String nome, String idade, String som, String nomeDono,String rgDono, String correr, String cor)
+	public Cavalo (String nome, String idade, String nomeDono,String rgDono, String correr, String cor)
 	{
-		super(nome, idade, som);
+		super(nome, idade);
 		this.nomeDono = nomeDono;
 		this.rgDono = rgDono;
 		this.correr = correr;
@@ -18,9 +19,21 @@ public class Cavalo extends Animal {
 		
 	}
 	
-	public Cavalo (String nome,String idade, String som)
+	
+	
+	@Override
+	public void emitirsom1()
 	{
-	super (nome, idade, som);
+		System.out.println("O som que o animal é: iiirrrrí ... rilinchin");
+	}
+	
+	
+	
+	
+	
+	public Cavalo (String nome,String idade)
+	{
+	super (nome, idade);
 	}
 
 	public String getNomeDono() {
@@ -59,7 +72,7 @@ public class Cavalo extends Animal {
 	
 	public void saida ()
 	{
-		System.out.println("\nO nome do cavalo: " + getNome() + "\nIdade: " + getIdade() + "\nO som do cavalo: " + getSom()+ "\nNome do dono: " 
+		System.out.println("\nO nome do cavalo: " + getNome() + "\nIdade: " + getIdade() + "\nNome do dono: " 
 		+ nomeDono + "\nRg do dono: " + rgDono + "\nO animal corre" + correr + "\nCor: " + cor);
 	}
 	
